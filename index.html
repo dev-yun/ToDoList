@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Todo List</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="clock" style="text-align:left;"></h1>
+        <span class="weather" style="text-align: right top;"></span>
+    </header>
+    <div class="sorting">
+        <div class="container">
+            <div>
+                <form class="login-form hidden">
+                    <input type="text" required maxlength="15" placeholder="What's your name?">
+                    <input type="submit" value="login">
+                </form>
+                <h1 id="user" class="hidden"></h1>
+            </div>
+            <div>
+                <form id="form-id" class="hidden">
+                    목적지와 예정일을 추가하세요!<br>
+                    <input type="text" placeholder="Write your travel destination!">
+                    <input type="date" max="9999-12-31"> 
+                    <input type="submit" value="submit">
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+        <footer  id="proverb">
+            <span></span><br><br>
+            <span></span>
+        </footer>
+    </div>
+    <script src="js/ignore.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/proverbs.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

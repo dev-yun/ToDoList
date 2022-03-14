@@ -1,4 +1,4 @@
-const loginForm = document.querySelector('.login-form');
+const loginForm = document.querySelector('.user-screen__login-form');
 const loginInput = loginForm.querySelector('input');
 const user = document.querySelector('#user');
 
@@ -13,7 +13,7 @@ function onLoginSubmit(event) {
 }
 
 function paintingUser(username) {
-  user.innerHTML = `${username}'s Travel List!`;
+  user.innerHTML = `${username}'s ToDo List📝`;
   user.classList.remove(HIDDEN_CLASSNAME);
 }
 

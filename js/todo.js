@@ -1,8 +1,8 @@
-const travelForm = document.querySelector('#form-id');
+const travelForm = document.querySelector('.user-screen__todo-form');
 const input = travelForm.querySelectorAll('input');
 const travelInput = input[0];
 const dateInput = input[1];
-const todoList = document.querySelector('#todo-list');
+const todoList = document.querySelector('.todo-list');
 
 let toDos = [];
 

@@ -52,8 +52,8 @@ const proverbs = [
     Auther: '오손 웰스',
   },
 ];
-const title = document.querySelector('#proverb span:first-child');
-const content = document.querySelector('#proverb span:last-child');
+const title = document.querySelector('.proverb span:first-child');
+const content = document.querySelector('.proverb span:last-child');
 
 function showTitleAndContent() {
   const randomProv = proverbs[Math.floor(Math.random() * proverbs.length)];

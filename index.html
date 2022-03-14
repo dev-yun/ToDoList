@@ -9,35 +9,64 @@
     <title>Todo List</title>
 </head>
 
-<body class="body">
-    <header class="header">
-        <h1 class="clock" style="text-align:left;"></h1>
-        <span class="weather" style="text-align: right top;"></span>
-    </header>
-    <div class="sorting">
-        <div class="container">
+<body>
+    <section class="user-screen">
+      <div class="date">
+        <h1 class="date__clock"></h1>
+        <span class="date__weather"></span>
+      </div>
+        <article class="user-screen__login">
+          <h1 id="user" class="hidden"></h1>
             <div>
-                <form class="login-form hidden">
+                <form class="user-screen__login-form hidden">
                     <input type="text" required maxlength="15" placeholder="What's your name?">
                     <input type="submit" value="login">
                 </form>
-                <h1 id="user" class="hidden"></h1>
             </div>
             <div>
-                <form id="form-id" class="hidden">
-                    목적지와 예정일을 추가하세요!<br>
-                    <input type="text" placeholder="Write your travel destination!">
+                <form class="user-screen__todo-form" class="hidden">
+                    <input type="text" placeholder="할일을 입력하세요!" required autocomplete="off">
                     <input type="date" max="9999-12-31"> 
                     <input type="submit" value="submit">
                 </form>
-                <ul id="todo-list"></ul>
             </div>
+        </article>
+        <div class="proverb"><span></span><span></span></div>
+    </section>
+
+    <section class="content-screens hidden">
+      <article class="todo-list">
+        <h2>To Do List</h2>
+        <ul></ul>
+      </article>
+
+      <article class="illust">
+        <h2>Illust</h2>
+        <div class="illust__overlay">
+          <img src=""class="illust__img">
         </div>
-        <footer  id="proverb">
-            <span></span><br><br>
-            <span></span>
-        </footer>
-    </div>
+      </article>
+
+      <article class="music">
+        <h2>Music</h2>
+        <div class="music__img">
+          <img src="" alt="">
+        </div>
+
+        <div class="music__column">
+          <div class="music__btn">
+            <i class="music__back-play"></i>
+            <i class="music__play-pause"></i>
+            <i class="music__forward-play"></i>
+          </div>
+          <div class="music__info">
+            <div class="music__title"></div>
+            <div class="music__artist"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <script src="js/ignore.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/background.js"></script>

@@ -1,17 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
 @import "reset.css";
 
 @import "screens/login.css";
 @import "screens/background.css";
-@import "screens/user.css";
+@import "screens/leftScreen.css";
+@import "screens/rightScreen.css";
 
 body {
-  color: white;
   font-family: 'Dongle', sans-serif;
-  font-size: 24px;
+  font-size: 30px; 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.hidden {
+  display: none;
+}
 
 
 

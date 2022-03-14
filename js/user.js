@@ -1,5 +1,9 @@
-const loginForm = document.querySelector('.user-screen__login-form');
-const loginInput = loginForm.querySelector('input');
+const leftScreen = document.querySelector(".user-screen");
+const rightScreen = document.querySelector(".content-screens");
+const loginForm = document.querySelector(".user-screen__login-form");
+const inputUserName = loginForm.querySelector("input[type='text']");
+const toDoForm = document.querySelector(".user-screen__todo-form");
+const inputNewToDo = toDoForm.querySelector("input[type='text']");
 const user = document.querySelector('#user');
 
 const HIDDEN_CLASSNAME = 'hidden';
@@ -7,7 +11,7 @@ const USERNAME_KEY = 'username';
 
 function onLoginSubmit(event) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
-  const username = loginInput.value;
+  const username = inputUserName.value;
   localStorage.setItem(USERNAME_KEY, username);
   paintingUser(username);
 }
@@ -29,7 +33,9 @@ if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener('submit', onLoginSubmit);
 } else {
-  travelForm.classList.remove(HIDDEN_CLASSNAME);
+  toDoForm.classList.remove(HIDDEN_CLASSNAME);
+  rightScreen.classList.remove(HIDDEN_CLASSNAME);
+  leftScreen.classList.remove("login-screen");
   paintingUser(savedUsername);
   const button = document.createElement('button');
   button.innerHTML = 'logout';

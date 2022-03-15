@@ -20,5 +20,8 @@ body {
   display: none;
 }
 
+input {
+  border: none;
+}
 
 

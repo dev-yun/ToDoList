@@ -1,9 +1,7 @@
 .login-screen{
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     position: absolute;
-    top: 10%;
-    left: 25%;
     width: 50%;
     height: 80%;
 
@@ -21,11 +19,14 @@
     align-items: center;
 }
 
+.login-screen input{
+    margin-bottom: 8rem;
+}
+
 .login-screen input:first-child{
-    height: 2rem;
+    height: 1.5rem;
     width: 20rem;
     border-radius: 2rem;
-    border: none;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -33,13 +34,13 @@
 .login-screen input:last-child{
     width: 3rem;
     border-radius: 1rem;
-    border: none;
+    background-color: rgba(16, 210, 235, 0.6);
 }
 
 .login-screen .date{
     position: absolute;
-    top:3rem;
-    left: 3rem;
+    top:1rem;
+    left: 1rem;
 }
 
 .login-screen .proverb{

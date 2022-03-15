@@ -8,6 +8,7 @@
 @import "screens/toDoList.css";
 @import "screens/illust.css";
 @import "screens/music.css";
+@import "screens/minWidth.css";
 
 body {
   font-family: 'Dongle', sans-serif;

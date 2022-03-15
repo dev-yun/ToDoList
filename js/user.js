@@ -17,7 +17,7 @@ function onLoginSubmit(event) {
 }
 
 function paintingUser(username) {
-  user.innerHTML = `${username}'s ToDo List📝`;
+  user.innerHTML = `${username}'s ToDo List`;
   user.classList.remove(HIDDEN_CLASSNAME);
 }
 

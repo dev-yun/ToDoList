@@ -5,15 +5,24 @@
 @import "screens/background.css";
 @import "screens/leftScreen.css";
 @import "screens/rightScreen.css";
+@import "screens/toDoList.css";
+@import "screens/illust.css";
+@import "screens/music.css";
 
 body {
   font-family: 'Dongle', sans-serif;
-  font-size: 30px; 
+  font-size: 30px;
+}
+
+.constructor{
   width: 100vw;
   height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  overflow: auto;
 }
 
 .hidden {

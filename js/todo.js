@@ -21,7 +21,7 @@ function paintTodo(newTodo) {
   const li = document.createElement('li');
   li.id = newTodo.id;
   const span = document.createElement('span');
-  span.innerText = `Destination : ${newTodo.text}, Planned date :  ${newTodo.DDay} `;
+  span.innerText = `- ${newTodo.text}`;
   const button = document.createElement('button');
   button.innerHTML = '❌';
   button.addEventListener('click', removeTodo);

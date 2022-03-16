@@ -19,6 +19,7 @@ function removeTodo(event) {
 function paintTodo(newTodo) {
   const li = document.createElement('li');
   li.id = newTodo.id;
+  li.classList.add("add_animation");
   const span = document.createElement('span');
   span.innerText = `- ${newTodo.text}`;
   const button = document.createElement('button');

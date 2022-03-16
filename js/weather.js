@@ -1,8 +1,6 @@
 const weatherSpan = document.querySelector('.date__weather');
 const WEATHER_API_KEY = weatherApiKey;
 
-console.log(WEATHER_API_KEY);
-
 function onGeoOk(location) {
   const lat = location.coords.latitude;
   const lon = location.coords.longitude;

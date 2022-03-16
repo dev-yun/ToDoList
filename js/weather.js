@@ -1,9 +1,12 @@
 const weatherSpan = document.querySelector('.date__weather');
+const WEATHER_API_KEY = weatherApiKey;
+
+console.log(WEATHER_API_KEY);
 
 function onGeoOk(location) {
   const lat = location.coords.latitude;
   const lon = location.coords.longitude;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=7b5d8483de7f771260b8331fcad1cac3`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`;
 
   fetch(url)
     .then((response) => response.json())

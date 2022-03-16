@@ -15,6 +15,16 @@
   margin: 2rem 1rem;
 }
 
+.user-screen .date span{
+  display: flex;
+  align-items: center;
+}
+
+.user-screen .date span img{
+  width: 3rem;
+}
+
+
 #user{
   display: flex;
   flex-direction: column;

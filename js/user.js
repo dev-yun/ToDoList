@@ -2,7 +2,6 @@ const leftScreen = document.querySelector(".user-screen");
 const rightScreen = document.querySelector(".content-screens");
 const loginForm = document.querySelector(".user-screen__login-form");
 const inputUserName = loginForm.querySelector("input[type='text']");
-const toDoForm = document.querySelector(".user-screen__todo-form");
 const inputNewToDo = toDoForm.querySelector("input[type='text']");
 const user = document.querySelector('#user');
 

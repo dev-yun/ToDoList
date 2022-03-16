@@ -1,7 +1,6 @@
-const travelForm = document.querySelector('.user-screen__todo-form');
-const input = travelForm.querySelectorAll('input');
+const toDoForm = document.querySelector(".user-screen__todo-form");
+const input = toDoForm.querySelectorAll('input');
 const travelInput = input[0];
-const dateInput = input[1];
 const todoList = document.querySelector('.todo-list');
 
 let toDos = [];
@@ -34,12 +33,10 @@ function paintTodo(newTodo) {
 function makeList(event) {
   event.preventDefault();
   const newTodo = travelInput.value;
-  const newTime = dateInput.value;
   travelInput.value = ''; // 엔터를 입력할 시 input값에 사용자가 입력한 값을 사라지게함
   const newTodoObj = {
     id: Date.now(),
     text: newTodo,
-    DDay: newTime,
   };
 
   toDos.push(newTodoObj);
@@ -47,7 +44,7 @@ function makeList(event) {
   saveTodos();
 }
 
-travelForm.addEventListener('submit', makeList);
+toDoForm.addEventListener('submit', makeList);
 
 const savedTodo = localStorage.getItem('todos');
 

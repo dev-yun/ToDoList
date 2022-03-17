@@ -7,9 +7,7 @@
 }
 
 .illust__img{
-    width: 90%;
-    height: 90%;
-
+    width: 80%;
     border-radius: 1rem;
 }
 
@@ -24,7 +22,7 @@
     border-top-right-radius: 0;
     
     position: absolute;
-    left: 1.6rem;
+    left: 3.7rem;
 }
 
 .illust__next-btn{
@@ -39,7 +37,7 @@
     border-top-left-radius: 0;
 
     position: absolute;
-    right: 1.56rem;
+    right: 3.7rem;
 }
 
 .illust__prev-btn:hover,

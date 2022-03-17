@@ -1,6 +1,6 @@
 const illustImg = document.querySelector(".illust__img");
-const nextImgBtn = document.querySelector(".illust__prev-btn");
-const prevImgBtn = document.querySelector(".illust__next-btn");
+const prevImgBtn = document.querySelector(".illust__prev-btn");
+const nextImgBtn = document.querySelector(".illust__next-btn");
 
 const illusts = [
     "https://www.ghibli.jp/gallery/karigurashi022.jpg",
@@ -42,7 +42,8 @@ const illusts = [
 
 function randomIllust() {
     const illust = illusts[Math.floor(Math.random() * illusts.length)];
-    return illust;
+    const firstIllustIndex = illusts.indexOf(illust);
+    return firstIllustIndex 
 }
 
 
@@ -69,14 +70,14 @@ const illustViewer = {
 
 
 function showIllust(){
-    const firstIllustIndex = illusts.indexOf(randomIllust());
-    window.addEventListener("load", function(firstIllustIndex){
+    let firstIllustIndex = randomIllust();
+    window.addEventListener("load", function(){
         illustViewer.currentIllust(firstIllustIndex);
     });
-    prevImgBtn.addEventListener('click', function (firstIllustIndex) {
+    prevImgBtn.addEventListener('click', function () {
         illustViewer.prevIllust(firstIllustIndex);
     });
-    nextImgBtn.addEventListener('click', function (firstIllustIndex){
+    nextImgBtn.addEventListener('click', function (){
         illustViewer.nextIllust(firstIllustIndex);
     });
 }

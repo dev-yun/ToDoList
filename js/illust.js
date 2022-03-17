@@ -47,31 +47,39 @@ function randomIllust() {
 
 
 const illustViewer = {
-    prevIllust : function(){
-        const firstIllustIndex = illusts.indexOf(randomIllust());
-        prevIndex = firstIllustIndex-1
+    prevIllust : function(firstIllustIndex){
+        prevIndex = firstIllustIndex - 1
         if (prevIndex >= 0) {
             return illustImg.src = illusts[prevIndex];
         }
-        return illustImg.src = illusts[(illusts.length-1)]
+        return illustImg.src = illusts[(illusts.length - 1)]
     },
-    nextIllust : function(){
-        const firstIllustIndex = illusts.indexOf(randomIllust());
-        nextIndex = firstIllustIndex+1
+    nextIllust : function(firstIllustIndex){
+        nextIndex = firstIllustIndex + 1
         if (nextIndex < illusts.length){
             return illustImg.src = illusts[nextIndex]
         }
         return illustImg.src = illusts[0]
+    },
+    currentIllust : function(firstIllustIndex){
+        curruntIndex = firstIllustIndex;
+        return illustImg.src = illusts[curruntIndex];
     }
 }
 
 
 function showIllust(){
     const firstIllustIndex = illusts.indexOf(randomIllust());
-    const illustSrc = illusts[firstIllustIndex];
-    illustImg.src = illustSrc;
-    prevImgBtn.addEventListener('click', illustViewer.prevIllust);
-    nextImgBtn.addEventListener('click', illustViewer.nextIllust);
+    window.addEventListener("load", function(firstIllustIndex){
+        illustViewer.currentIllust(firstIllustIndex);
+    });
+    prevImgBtn.addEventListener('click', function (firstIllustIndex) {
+        illustViewer.prevIllust(firstIllustIndex);
+    });
+    nextImgBtn.addEventListener('click', function (firstIllustIndex){
+        illustViewer.nextIllust(firstIllustIndex);
+    });
 }
 
-window.addEventListener("load", showIllust)
+showIllust();
+

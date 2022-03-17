@@ -1,6 +1,6 @@
 const illustImg = document.querySelector(".illust__img");
-const nextImgBtn = document.querySelector(".illust__prev-btn");
-const prevImgBtn = document.querySelector(".illust__next-btn");
+const prevImgBtn = document.querySelector(".illust__prev-btn");
+const nextImgBtn = document.querySelector(".illust__next-btn");
 
 const illusts = [
     "https://www.ghibli.jp/gallery/karigurashi022.jpg",
@@ -42,36 +42,48 @@ const illusts = [
 
 function randomIllust() {
     const illust = illusts[Math.floor(Math.random() * illusts.length)];
-    return illust;
+    const firstIllustIndex = illusts.indexOf(illust);
+    localStorage.setItem('illustsIndex', firstIllustIndex);
 }
 
 
 const illustViewer = {
-    prevIllust : function(){
-        const firstIllustIndex = illusts.indexOf(randomIllust());
-        prevIndex = firstIllustIndex-1
-        if (prevIndex >= 0) {
-            return illustImg.src = illusts[prevIndex];
-        }
-        return illustImg.src = illusts[(illusts.length-1)]
+    paintIllust : function(illustsIndex){
+        illustImg.src = illusts[illustsIndex]
     },
-    nextIllust : function(){
-        const firstIllustIndex = illusts.indexOf(randomIllust());
-        nextIndex = firstIllustIndex+1
-        if (nextIndex < illusts.length){
-            return illustImg.src = illusts[nextIndex]
-        }
-        return illustImg.src = illusts[0]
+    currentIllust : function(){
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        curruntIndex = parseInt(illustsIndex);
+        return illustImg.src = illusts[curruntIndex];
     }
 }
 
 
 function showIllust(){
-    const firstIllustIndex = illusts.indexOf(randomIllust());
-    const illustSrc = illusts[firstIllustIndex];
-    illustImg.src = illustSrc;
-    prevImgBtn.addEventListener('click', illustViewer.prevIllust);
-    nextImgBtn.addEventListener('click', illustViewer.nextIllust);
+    randomIllust();
+    window.addEventListener("load", function(){
+        illustViewer.currentIllust();
+    });
+    prevImgBtn.addEventListener('click', function () {
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        illustsIndex = parseInt(illustsIndex) - 1
+        if (illustsIndex < 0) {
+            illustsIndex = illusts.length-1
+        }
+        localStorage.setItem("illustsIndex", illustsIndex);
+
+        illustViewer.paintIllust(illustsIndex);
+    });
+    nextImgBtn.addEventListener('click', function (){
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        illustsIndex = parseInt(illustsIndex) + 1
+        if (illustsIndex >= illusts.length) {
+            illustsIndex = 0
+        }
+        localStorage.setItem("illustsIndex", illustsIndex);
+
+        illustViewer.paintIllust(illustsIndex);
+    });
 }
 
-window.addEventListener("load", showIllust)
+showIllust();

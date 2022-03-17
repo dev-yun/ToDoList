@@ -44,19 +44,22 @@ function randomIllust() {
     const illust = illusts[Math.floor(Math.random() * illusts.length)];
     return illust;
 }
-const firstIllustIndex = illusts.indexOf(randomIllust());
 
 
 const illustViewer = {
     prevIllust : function(){
-        if ((firstIllustIndex-1) >= 0) {
-            return illustImg.src = illusts[(firstIllustIndex-1)]
+        const firstIllustIndex = illusts.indexOf(randomIllust());
+        prevIndex = firstIllustIndex-1
+        if (prevIndex >= 0) {
+            return illustImg.src = illusts[prevIndex];
         }
         return illustImg.src = illusts[(illusts.length-1)]
     },
     nextIllust : function(){
-        if ((firstIllustIndex+1) < illusts.length){
-            return illustImg.src = illusts[(firstIllustIndex+1)]
+        const firstIllustIndex = illusts.indexOf(randomIllust());
+        nextIndex = firstIllustIndex+1
+        if (nextIndex < illusts.length){
+            return illustImg.src = illusts[nextIndex]
         }
         return illustImg.src = illusts[0]
     }
@@ -64,6 +67,7 @@ const illustViewer = {
 
 
 function showIllust(){
+    const firstIllustIndex = illusts.indexOf(randomIllust());
     const illustSrc = illusts[firstIllustIndex];
     illustImg.src = illustSrc;
     prevImgBtn.addEventListener('click', illustViewer.prevIllust);

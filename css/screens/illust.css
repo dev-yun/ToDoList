@@ -10,20 +10,40 @@
     width: 90%;
     height: 90%;
 
-    border-radius: 1.5rem;
+    border-radius: 1rem;
 }
 
 .illust__prev-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 100%;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    
     position: absolute;
     left: 1.6rem;
-    
 }
 
 .illust__next-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 100%;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
     position: absolute;
-    right: 1.6rem;
+    right: 1.56rem;
 }
 
-.illust_img-box i:hover{
-
+.illust__prev-btn:hover,
+.illust__next-btn:hover{
+    opacity: 0.5;
+    background-color: aliceblue;
 }

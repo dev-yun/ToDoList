@@ -9,6 +9,52 @@ const musicTitle = document.querySelector(".music__title");
 const PLAY_BTN = "fa-solid fa-play";
 const PAUSE_BTN = "fa-solid fa-pause";
 
+const handleMusic = {
+    playMusic : function () {
+        music.play();
+        playBtn.className = PAUSE_BTN;
+    },
+    pauseMusic : function () {
+        music.pause();
+        playBtn.className = PLAY_BTN;
+    },
+};
+
+function toggle() {
+    return music.paused ? handleMusic.playMusic() : handleMusic.pauseMusic();
+}
+
+const player = {
+    nextMusic : function () {
+        const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
+        music.src = `asset/music/${musicList.src}`;
+        animation.innerText = musicList.animation;
+        musicTitle.innerText = musicList.musicTitle;
+        musicImg.src = `asset/img/${musicList.img}`;
+        return music.played ? handleMusic.playMusic() : handleMusic.pauseMusic();
+    },
+    autoMusic : function () {
+        const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
+        music.src = `asset/music/${musicList.src}`;
+        animation.innerText = musicList.animation;
+        musicTitle.innerText = musicList.musicTitle;
+        musicImg.src = `asset/img/${musicList.img}`;
+        return music.paused ? handleMusic.playMusic() : handleMusic.pauseMusic();
+    },
+};
+
+function musicPlayer(){
+    const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
+    music.src = `asset/music/${musicList.src}`;
+    animation.innerText = musicList.animation;
+    musicTitle.innerText = musicList.musicTitle;
+    musicImg.src = `asset/img/${musicList.img}`;
+    prevBtn.addEventListener('click', player.nextMusic);
+    nextBtn.addEventListener('click', player.nextMusic);
+    music.addEventListener("ended", player.autoMusic);
+    playBtn.addEventListener("click", toggle);
+}
+
 const musicInfo = [
     {
         animation: "고양이의 보은",
@@ -77,60 +123,6 @@ const musicInfo = [
         img: "하울1.jpg",
     },
 ]
-
-const handleMusic = {
-    playMusic : function () {
-        music.play();
-        playBtn.className = PAUSE_BTN;
-    },
-    pauseMusic : function () {
-        music.pause();
-        playBtn.className = PLAY_BTN;
-    },
-};
-
-function toggle() {
-    return music.paused ? handleMusic.playMusic() : handleMusic.pauseMusic();
-}
-
-const player = {
-    nextMusic : function () {
-        const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
-        music.src = `asset/music/${musicList.src}`;
-        animation.innerText = musicList.animation;
-        musicTitle.innerText = musicList.musicTitle;
-        musicImg.src = `asset/img/${musicList.img}`;
-        return music.played ? handleMusic.playMusic() : handleMusic.pauseMusic();
-    },
-    prevMusic : function () {
-        const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
-        music.src = `asset/music/${musicList.src}`;
-        animation.innerText = musicList.animation;
-        musicTitle.innerText = musicList.musicTitle;
-        musicImg.src = `asset/img/${musicList.img}`;
-        return music.played ? handleMusic.playMusic() : handleMusic.pauseMusic();
-    },
-    autoMusic : function () {
-        const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
-        music.src = `asset/music/${musicList.src}`;
-        animation.innerText = musicList.animation;
-        musicTitle.innerText = musicList.musicTitle;
-        musicImg.src = `asset/img/${musicList.img}`;
-        return music.paused ? handleMusic.playMusic() : handleMusic.pauseMusic();
-    },
-};
-
-function musicPlayer(){
-    const musicList = musicInfo[Math.floor(Math.random() * musicInfo.length)];
-    music.src = `asset/music/${musicList.src}`;
-    animation.innerText = musicList.animation;
-    musicTitle.innerText = musicList.musicTitle;
-    musicImg.src = `asset/img/${musicList.img}`;
-    prevBtn.addEventListener('click', player.prevMusic);
-    nextBtn.addEventListener('click', player.nextMusic);
-    music.addEventListener("ended", player.autoMusic);
-    playBtn.addEventListener("click", toggle);
-}
 
 
 window.addEventListener("load", musicPlayer);

@@ -26,6 +26,10 @@
     margin: 0 1rem;
 }
 
+.music__btn i:active{
+    color: red;
+}
+
 .music__info{
     display: flex;
     flex-direction: column;

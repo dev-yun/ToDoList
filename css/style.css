@@ -24,6 +24,21 @@ body {
   align-items: center;
 
   overflow: auto;
+
+  animation: smoothView 0.8s linear;
+}
+
+
+@keyframes smoothView{
+  0%{
+      opacity: 0;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
 }
 
 .hidden {

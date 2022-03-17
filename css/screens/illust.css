@@ -1,0 +1,29 @@
+.illust__img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.illust__img{
+    width: 90%;
+    height: 90%;
+
+    border-radius: 1.5rem;
+}
+
+.illust__prev-btn{
+    position: absolute;
+    left: 1.6rem;
+    
+}
+
+.illust__next-btn{
+    position: absolute;
+    right: 1.6rem;
+}
+
+.illust_img-box i:hover{
+
+}

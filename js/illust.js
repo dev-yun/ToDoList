@@ -43,42 +43,46 @@ const illusts = [
 function randomIllust() {
     const illust = illusts[Math.floor(Math.random() * illusts.length)];
     const firstIllustIndex = illusts.indexOf(illust);
-    return firstIllustIndex 
+    localStorage.setItem('illustsIndex', firstIllustIndex);
 }
 
 
 const illustViewer = {
-    prevIllust : function(firstIllustIndex){
-        prevIndex = firstIllustIndex - 1
-        if (prevIndex >= 0) {
-            return illustImg.src = illusts[prevIndex];
-        }
-        return illustImg.src = illusts[(illusts.length - 1)]
+    paintIllust : function(illustsIndex){
+        illustImg.src = illusts[illustsIndex]
     },
-    nextIllust : function(firstIllustIndex){
-        nextIndex = firstIllustIndex + 1
-        if (nextIndex < illusts.length){
-            return illustImg.src = illusts[nextIndex]
-        }
-        return illustImg.src = illusts[0]
-    },
-    currentIllust : function(firstIllustIndex){
-        curruntIndex = firstIllustIndex;
+    currentIllust : function(){
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        curruntIndex = parseInt(illustsIndex);
         return illustImg.src = illusts[curruntIndex];
     }
 }
 
 
 function showIllust(){
-    let firstIllustIndex = randomIllust();
+    randomIllust();
     window.addEventListener("load", function(){
-        illustViewer.currentIllust(firstIllustIndex);
+        illustViewer.currentIllust();
     });
     prevImgBtn.addEventListener('click', function () {
-        illustViewer.prevIllust(firstIllustIndex);
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        illustsIndex = parseInt(illustsIndex) - 1
+        if (illustsIndex < 0) {
+            illustsIndex = illusts.length-1
+        }
+        localStorage.setItem("illustsIndex", illustsIndex);
+
+        illustViewer.paintIllust(illustsIndex);
     });
     nextImgBtn.addEventListener('click', function (){
-        illustViewer.nextIllust(firstIllustIndex);
+        let illustsIndex = localStorage.getItem("illustsIndex");
+        illustsIndex = parseInt(illustsIndex) + 1
+        if (illustsIndex >= illusts.length) {
+            illustsIndex = 0
+        }
+        localStorage.setItem("illustsIndex", illustsIndex);
+
+        illustViewer.paintIllust(illustsIndex);
     });
 }
 

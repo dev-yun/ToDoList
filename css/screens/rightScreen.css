@@ -1,6 +1,5 @@
 .content-screens{
-    width: 40%;
-    height: 80%;
+    width: 45rem;
 
     display: flex;
     flex-wrap:wrap;
@@ -8,10 +7,13 @@
 
 
 .todo-list{
-    width: 35%;
-    height: 45%;
+    width: 18rem;
+    height: 18rem;
+
+    display: flex;
+    flex-direction: column;
     
-    margin: 0rem 1.5rem 0rem 3rem;
+    margin: 0rem 1rem 0rem 3rem;
 
     border-radius: 3rem;
     border: rgba(16, 210, 235, 0.6) 2px solid;
@@ -20,10 +22,10 @@
 
 
 .music{
-    width: 35%;
-    height: 45%;
+    width: 18rem;
+    height: 18rem;
     
-    margin: 0rem 3rem 0rem 1.5rem;
+    margin: 0rem 1rem 0rem 1rem;
 
     border-radius: 3rem;
     border: rgba(16, 210, 235, 0.6) 2px solid;
@@ -31,10 +33,13 @@
 }
 
 .illust{
-    width: 78%;
-    height: 45%;
+    display: flex;
+    flex-direction: column;
     
-    margin: 4rem 3rem 0rem 3rem;
+    width: 38rem;
+    height: 20rem;
+    
+    margin: 1rem 2rem 0rem 3rem;
 
     border-radius: 3rem;
     border: rgba(16, 210, 235, 0.6) 2px solid;

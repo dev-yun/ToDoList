@@ -1,7 +1,7 @@
 .user-screen{
   position: relative;
-  width: 20%;
-  height: 80%;
+  width: 24rem;
+  height: 40rem;
   background-color: rgba(255, 255, 255, 0.5);
 
   display: flex;
@@ -55,7 +55,7 @@
 }
 
 .user-screen__todo-form input:first-child{
-  width: 90%;
+  width: 22rem;
   margin-bottom: 1rem;
 }
 

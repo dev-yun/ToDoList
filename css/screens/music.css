@@ -1,54 +1,54 @@
-.music{
-    position: relative;
+.music {
+  position: relative;
 }
 
 .music__img {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.music__img img{
-    width: 10rem;
-    height: 7rem;
-    border-radius: 2rem;
-    
-    margin-bottom: 1rem;
+.music__img img {
+  width: 12rem;
+  height: 8rem;
+  border-radius: 2rem;
+
+  margin-bottom: 2rem;
 }
 
-.music__column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.music__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.music__btn i:nth-child(2){
-    margin: 0 1rem;
+.music__btn i:nth-child(2) {
+  margin: 0 1rem;
 }
 
-.music__btn i:active{
-    color: red;
+.music__btn i:active {
+  color: red;
 }
 
-.music__info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.music__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
-.music__info .music__animation{
-    position: absolute;
-    bottom: 2rem;
+.music__info .music__animation {
+  position: absolute;
+  bottom: 2rem;
 }
 
-.music__info .music__title{
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 2rem;
+.music__info .music__title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
 
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap");
 @import "reset.css";
 
 @import "screens/login.css";
@@ -11,11 +11,11 @@
 @import "screens/minWidth.css";
 
 body {
-  font-family: 'Dongle', sans-serif;
+  font-family: "Dongle", sans-serif;
   font-size: 30px;
 }
 
-.constructor{
+.constructor {
   width: 100vw;
   height: 100vh;
 
@@ -28,16 +28,15 @@ body {
   animation: smoothView 0.8s linear;
 }
 
-
-@keyframes smoothView{
-  0%{
-      opacity: 0;
+@keyframes smoothView {
+  0% {
+    opacity: 0;
   }
-  50%{
-      opacity: 0.5;
+  50% {
+    opacity: 0.5;
   }
-  100%{
-      opacity: 1;
+  100% {
+    opacity: 1;
   }
 }
 
@@ -48,5 +47,3 @@ body {
 input {
   border: none;
 }
-
-

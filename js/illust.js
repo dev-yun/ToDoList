@@ -48,12 +48,13 @@ function randomIllust() {
 
 const illustViewer = {
   paintIllust: function (illustsIndex) {
-    illustImg.style.backgroundImage = `url('${illusts[illustsIndex]}')`;
+    illustImg.src = illusts[illustsIndex];
+    //
   },
   currentIllust: function () {
     let illustsIndex = localStorage.getItem("illustsIndex");
     curruntIndex = parseInt(illustsIndex);
-    return (illustImg.style.backgroundImage = `url('${illusts[curruntIndex]}')`);
+    return (illustImg.src = illusts[curruntIndex]);
   },
 };
 

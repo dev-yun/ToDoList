@@ -49,7 +49,7 @@ function randomIllust() {
 const illustViewer = {
   paintIllust: function (illustsIndex) {
     illustImg.src = illusts[illustsIndex];
-    //
+    //illustImg.style.backgroundImage = `url('${illusts[illustsIndex]}')`; background 방식
   },
   currentIllust: function () {
     let illustsIndex = localStorage.getItem("illustsIndex");

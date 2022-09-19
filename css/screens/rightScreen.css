@@ -1,53 +1,51 @@
-.content-screens{
-    width: 45rem;
-
-    display: flex;
-    flex-wrap:wrap;
+.content-screens {
+  width: 60%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.todo-list {
+  width: 45%;
+  height: 40%;
 
-.todo-list{
-    width: 18rem;
-    height: 18rem;
+  display: flex;
+  flex-direction: column;
 
-    display: flex;
-    flex-direction: column;
-    
-    margin: 0rem 1rem 0rem 3rem;
+  margin: 0rem 1rem 0rem 3rem;
 
-    border-radius: 3rem;
-    border: rgba(16, 210, 235, 0.6) 2px solid;
-    background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3rem;
+  border: rgba(16, 210, 235, 0.6) 2px solid;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
+.music {
+  width: 45%;
+  height: 40%;
 
-.music{
-    width: 18rem;
-    height: 18rem;
-    
-    margin: 0rem 1rem 0rem 1rem;
+  margin: 0rem 1rem 0rem 1rem;
 
-    border-radius: 3rem;
-    border: rgba(16, 210, 235, 0.6) 2px solid;
-    background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3rem;
+  border: rgba(16, 210, 235, 0.6) 2px solid;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.illust{
-    display: flex;
-    flex-direction: column;
-    
-    width: 38rem;
-    height: 20rem;
-    
-    margin: 1rem 2rem 0rem 3rem;
+.illust {
+  display: flex;
+  flex-direction: column;
 
-    border-radius: 3rem;
-    border: rgba(16, 210, 235, 0.6) 2px solid;
-    background-color: rgba(255, 255, 255, 0.6);
+  width: 38rem;
+  height: 20rem;
+
+  margin: 1rem 2rem 0rem 3rem;
+
+  border-radius: 3rem;
+  border: rgba(16, 210, 235, 0.6) 2px solid;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.content-screens__title{
-    display: block;
-    margin: 1rem 0rem 0.5rem 1rem;
-    font-size: 2.5rem;
+.content-screens__title {
+  display: block;
+  margin: 1rem 0rem 0.5rem 1rem;
+  font-size: 2.5rem;
 }

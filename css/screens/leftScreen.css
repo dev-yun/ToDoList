@@ -1,65 +1,69 @@
-.user-screen{
+.user-screen {
   position: relative;
-  width: 24rem;
-  height: 40rem;
+  /* width: 24rem; */
+  width: 25%;
+  height: 70%;
   background-color: rgba(255, 255, 255, 0.5);
 
   display: flex;
   flex-direction: column;
-  
+
   border-radius: 3rem;
   border: rgba(16, 210, 235, 0.6) 2px solid;
 }
 
-.user-screen .date{
-  margin: 2rem 1rem;
+.user-screen .date {
+  margin: 2rem 2rem;
 }
 
-.user-screen .date span{
+.user-screen .date span {
   display: flex;
   align-items: center;
 }
 
-.user-screen .date span img{
+.user-screen .date span img {
   width: 3rem;
 }
 
-
-#user{
+#user {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 4rem 0rem 6rem 0rem;
 }
 
-#user button{
+#user button {
   border: none;
   border-radius: 1rem;
   font-weight: 700;
   background-color: rgba(16, 210, 235, 0.6);
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
-
-.user-screen__todo-form{
-  text-align: center;
+.user-screen__todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.user-screen__todo-form input{
-  height: 1.5rem;
+.user-screen__todo-input {
+  width: 70%;
+  height: 2rem;
   border-radius: 1rem;
   text-align: center;
-}
 
-.user-screen__todo-form input:first-child{
-  width: 22rem;
   margin-bottom: 1rem;
 }
 
-.user-screen__todo-form input:last-child{
+.user-screen__todo-form .submit {
+  height: 2rem;
+  width: fit-content;
+  font-size: 1rem;
+  border-radius: 1rem;
+  text-align: center;
   background-color: rgba(16, 210, 235, 0.6);
 }
 
@@ -78,6 +82,6 @@
   padding: 0rem 1rem;
 }
 
-.proverb span:first-child{
+.proverb span:first-child {
   margin-bottom: 1rem;
 }
